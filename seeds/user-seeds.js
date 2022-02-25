@@ -45,8 +45,9 @@ const userData = [
     }
 ]
 
-const seedUsers = () => User.bulkCreate(userData);
+const seedUsers = () => User.bulkCreate(userData,  {
+    individualHooks: true,
+    returning: true,});
 
-//Do I need to add the hooks here?
 
 module.exports = seedUsers;
