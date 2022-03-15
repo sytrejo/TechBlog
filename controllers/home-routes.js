@@ -24,8 +24,12 @@ router.get('/', (req, res) => {
         {
           model: User,
           attributes: ['username', 'twitter', 'github']
-        }
-      ]
+        },
+      ],
+      data: {
+        iconOne:'fab fa-twitter',
+        iconTwo:'fab fa-github'
+      }
     })
       .then(dbPostData => {
         const posts = dbPostData.map(post => post.get({ plain: true }));

@@ -28,7 +28,11 @@ router.get('/', (req, res) => {
           model: User,
           attributes: ['username', 'twitter', 'github']
         },
-      ]
+      ],
+      data:{
+        iconOne:'fab fa-twitter',
+        iconTwo:'fab fa-github'
+      }
     })
       .then(dbPostData => res.json(dbPostData))
       .catch(err => {
