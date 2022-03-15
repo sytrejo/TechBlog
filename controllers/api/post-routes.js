@@ -29,10 +29,6 @@ router.get('/', (req, res) => {
           attributes: ['username', 'twitter', 'github']
         },
       ],
-      data:{
-        iconOne:'fab fa-twitter',
-        iconTwo:'fab fa-github'
-      }
     })
       .then(dbPostData => res.json(dbPostData))
       .catch(err => {
